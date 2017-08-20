@@ -31,6 +31,10 @@
 		8505BA091F3DD4D300EDCB42 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8505BA081F3DD4D300EDCB42 /* CoreAudio.framework */; };
 		8505BA0B1F3DDCA800EDCB42 /* audioInp.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 8505BA0A1F3DDCA800EDCB42 /* audioInp.pcm */; };
 		8530B4601F48133B00433C19 /* FileFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8530B45F1F48133B00433C19 /* FileFrame.m */; };
+		85BC77D21F498D7000C813DE /* file.a711 in Resources */ = {isa = PBXBuildFile; fileRef = 85BC77CE1F498D7000C813DE /* file.a711 */; };
+		85BC77D31F498D7000C813DE /* g711.c in Sources */ = {isa = PBXBuildFile; fileRef = 85BC77CF1F498D7000C813DE /* g711.c */; };
+		85BC77D41F498D7000C813DE /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 85BC77D11F498D7000C813DE /* Makefile */; };
+		85BC77D61F498D7900C813DE /* FSLivePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BC77D51F498D7900C813DE /* FSLivePlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,11 @@
 		8505BA0A1F3DDCA800EDCB42 /* audioInp.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = audioInp.pcm; sourceTree = "<group>"; };
 		8530B45E1F48133B00433C19 /* FileFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFrame.h; sourceTree = "<group>"; };
 		8530B45F1F48133B00433C19 /* FileFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFrame.m; sourceTree = "<group>"; };
+		85BC77CE1F498D7000C813DE /* file.a711 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.a711; sourceTree = "<group>"; };
+		85BC77CF1F498D7000C813DE /* g711.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = g711.c; sourceTree = "<group>"; };
+		85BC77D01F498D7000C813DE /* g711.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = g711.h; sourceTree = "<group>"; };
+		85BC77D11F498D7000C813DE /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		85BC77D51F498D7900C813DE /* FSLivePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLivePlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +195,7 @@
 		8505125E1F433AE00029915D /* AudioCode */ = {
 			isa = PBXGroup;
 			children = (
+				85BC77CD1F498D7000C813DE /* g711 */,
 				850512611F433AE00029915D /* g726.c */,
 				850512621F433AE00029915D /* g726.h */,
 				850512631F433AE00029915D /* g726_16.c */,
@@ -202,14 +212,26 @@
 			children = (
 				8505127C1F4340640029915D /* file.726 */,
 				8505BA0A1F3DDCA800EDCB42 /* audioInp.pcm */,
+				8530B45E1F48133B00433C19 /* FileFrame.h */,
+				8530B45F1F48133B00433C19 /* FileFrame.m */,
 				8505BA001F3DD3B800EDCB42 /* FCInputAudio.h */,
 				8505BA011F3DD3B800EDCB42 /* FCInputAudio.m */,
 				8505BA021F3DD3B800EDCB42 /* FCOutputAudio.h */,
 				8505BA031F3DD3B800EDCB42 /* FCOutputAudio.m */,
-				8530B45E1F48133B00433C19 /* FileFrame.h */,
-				8530B45F1F48133B00433C19 /* FileFrame.m */,
+				85BC77D51F498D7900C813DE /* FSLivePlayViewController.m */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		85BC77CD1F498D7000C813DE /* g711 */ = {
+			isa = PBXGroup;
+			children = (
+				85BC77CE1F498D7000C813DE /* file.a711 */,
+				85BC77CF1F498D7000C813DE /* g711.c */,
+				85BC77D01F498D7000C813DE /* g711.h */,
+				85BC77D11F498D7000C813DE /* Makefile */,
+			);
+			path = g711;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04688D39197CB5CD007A8EC3 /* ViewController.xib in Resources */,
+				85BC77D21F498D7000C813DE /* file.a711 in Resources */,
 				8505127D1F4340640029915D /* file.726 in Resources */,
 				04688D0E197CB581007A8EC3 /* InfoPlist.strings in Resources */,
 				8505BA0B1F3DDCA800EDCB42 /* audioInp.pcm in Resources */,
@@ -314,10 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8505BA041F3DD3B800EDCB42 /* FCInputAudio.m in Sources */,
+				85BC77D61F498D7900C813DE /* FSLivePlayViewController.m in Sources */,
 				04688D1A197CB581007A8EC3 /* ViewController.m in Sources */,
 				8505126C1F433AE00029915D /* Makefile in Sources */,
+				85BC77D31F498D7000C813DE /* g711.c in Sources */,
 				8505BA051F3DD3B800EDCB42 /* FCOutputAudio.m in Sources */,
 				8505126B1F433AE00029915D /* g72x.c in Sources */,
+				85BC77D41F498D7000C813DE /* Makefile in Sources */,
 				8530B4601F48133B00433C19 /* FileFrame.m in Sources */,
 				850512691F433AE00029915D /* g726.c in Sources */,
 				04688D14197CB581007A8EC3 /* AppDelegate.m in Sources */,
